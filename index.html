@@ -2,14 +2,48 @@
 <html>
     <head>
         <title>TODO list</title>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 5%;
+            }
+          
+            #todo-form {
+              display: flex; /* Arrange inputs horizontally */
+              margin-bottom: 1rem; /* Add some space below the form */
+            }
+          
+            #todo {
+              flex: 1; /* Make input take up most available space */
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+          
+            #todo-list {
+              list-style: none; /* Remove default bullet points */
+              padding: 0;
+            }
+          
+            #todo-list li {
+              padding: 0.5rem;
+              border-bottom: 1px solid #ddd;
+              display: flex; /* Arrange list items horizontally */
+              justify-content: space-between; /* Align items and space evenly */
+              cursor: crosshair;
+            }
+          </style>
     </head>
     <body>
+        <h1>Lista de tareas pendientes <p id="current-date-time"></p></h1>
+        
         <form id="todo-form">
-            <input type="text" id="todo" />
-            <input type="submit" value="Enviar" />
-        </form>
+            <input type="text" id="todo" placeholder="Enter your task here..." />
+            <input type="submit" value="Add Task" />
+          </form>
         <ul id ="todo-list">
         </ul>
+        <h3>Click sobre la tarea para eliminar 🔫</h3>
     </body>
     <script src="main.js"></script>
 </html>

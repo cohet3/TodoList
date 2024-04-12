@@ -31,3 +31,23 @@ window.onload = () => {
         render()
     }
 }
+const timestamp = Date.now();
+const dateObject = new Date(timestamp);
+
+const year = dateObject.getFullYear();
+const month = dateObject.getMonth() + 1; // Months are zero-indexed
+const day = dateObject.getDate();
+const hours = dateObject.getHours();
+const minutes = dateObject.getMinutes();
+const seconds = dateObject.getSeconds();
+
+const currentDate = new Date();
+const formattedDate = currentDate.toLocaleString();
+
+console.log(formattedDate)
+
+const dateElement = document.getElementById('current-date-time');
+
+// Update the element's content with the formatted date and time
+dateElement.textContent = formattedDate;
+
